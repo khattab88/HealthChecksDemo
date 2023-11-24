@@ -1,5 +1,7 @@
 
 using API.Services.Health;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 namespace API
 {
@@ -17,7 +19,7 @@ namespace API
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddHealthChecks()
-                .AddCheck<ApiHealthCheck>("ServiceHealthChecks");
+                .AddCheck<ApiHealthCheck>("ServiceHealthChecks", tags: new string[] { "Weather Forecast Service Api" });
 
             var app = builder.Build();
 
@@ -35,7 +37,11 @@ namespace API
 
             app.MapControllers();
 
-            app.MapHealthChecks("/health");
+            app.MapHealthChecks("/health", new HealthCheckOptions()
+            {
+                Predicate = x => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
 
             app.Run();
         }
