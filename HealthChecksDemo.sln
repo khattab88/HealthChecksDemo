@@ -8,7 +8,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{40BC6AA6-C5F7-4C6A-87DC-E02692A0F8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{3C731C80-B15D-4BB0-8B61-2C94DAF24811}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40BC6AA6-C5F7-4C6A-87DC-E02692A0F8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BC6AA6-C5F7-4C6A-87DC-E02692A0F8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BC6AA6-C5F7-4C6A-87DC-E02692A0F8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BC6AA6-C5F7-4C6A-87DC-E02692A0F8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C731C80-B15D-4BB0-8B61-2C94DAF24811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C731C80-B15D-4BB0-8B61-2C94DAF24811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C731C80-B15D-4BB0-8B61-2C94DAF24811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C731C80-B15D-4BB0-8B61-2C94DAF24811}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
